@@ -22,10 +22,10 @@ namespace ToasterSimulator
             {
                 //toasting
             }
+            Stop();
         }
         public void Stop()
         {
-            toastTimer = null;
             Console.WriteLine($"{Slot1.Name} is {Slot1.CurrentToastLevel}");
             Console.WriteLine($"{Slot2.Name} is {Slot2.CurrentToastLevel}");
         }
@@ -46,7 +46,7 @@ namespace ToasterSimulator
 
             if(elapsed == 0)
             {
-                Stop();
+                toastTimer = null;
             }
         }
 
