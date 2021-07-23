@@ -10,7 +10,7 @@ namespace ToasterSimulator
 
         public int ToastLevelIncrementInSeconds { get; set; }
 
-        public ToastLevel CurrentToastLevel { get; set; }
+        public ToastLevel CurrentToastLevel { get; private set; }
 
         public void ChangeToasterState(int timeElasped)
         {

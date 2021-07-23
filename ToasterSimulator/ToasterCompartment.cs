@@ -18,6 +18,9 @@ namespace ToasterSimulator
         {
             TimerCallback callback = new TimerCallback(UpdateStatus);
             toastTimer = new Timer(callback,null, 0, 1000);
+
+            RollingTimerSeconds = TimerSeconds;
+            
             while (toastTimer != null)
             {
                 //toasting
@@ -44,7 +47,7 @@ namespace ToasterSimulator
                 Slot2.ChangeToasterState(elapsed);
             }
 
-            if(elapsed == 0)
+            if(RollingTimerSeconds == 0)
             {
                 toastTimer = null;
             }
