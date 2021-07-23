@@ -12,6 +12,9 @@ namespace ToasterSimulator
             toaster.ToasterCompartments[0] = new ToasterCompartment();
             toaster.ToasterCompartments[1] = new ToasterCompartment();
 
+            toaster.ToasterCompartments[0].TimerSeconds = 20;
+            toaster.ToasterCompartments[0].TimerSeconds = 10;
+
             toaster.ToasterCompartments[0].Slot1 = new Bread();
             toaster.ToasterCompartments[0].Slot1 = new Waffle();
             toaster.ToasterCompartments[1].Slot1 = new Bread();
