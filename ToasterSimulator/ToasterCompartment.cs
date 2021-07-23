@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace ToasterSimulator
 {
-    public abstract class ToasterCompartment
+    public class ToasterCompartment
     {
         public ToasterItem Slot1 { get; set; }
         public ToasterItem Slot2 { get; set; }

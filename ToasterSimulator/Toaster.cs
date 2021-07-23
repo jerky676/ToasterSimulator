@@ -6,9 +6,9 @@ namespace ToasterSimulator
 {
     public class Toaster
     {
-        public Toaster(int NumberOfComaprtments)
+        public Toaster(int NumberOfCompartments)
         {
-            ToasterCompartments = new ToasterCompartment[NumberOfComaprtments];
+            ToasterCompartments = new ToasterCompartment[NumberOfCompartments];
         }
 
         public ToasterCompartment[] ToasterCompartments { get; private set; }
