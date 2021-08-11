@@ -7,8 +7,8 @@ namespace ToasterSimulator
     public enum ToastLevel
     {
         NotToasted = 0,
-        Lightly = 1,
-        Perfectly = 2,
+        LightlyToasted = 1,
+        PerfectlyToasted = 2,
         Burnt = 3,
         OnFire = 4
     }

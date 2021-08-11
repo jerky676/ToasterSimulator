@@ -10,11 +10,6 @@ namespace ToasterSimulator
         public static async Task Main(string[] args)
         {
             var toaster = new Toaster();
-
-            //var toasterComa
-
-
-
             Console.WriteLine("Load Items");
 
             var items1 = new List<ToasterItem> {
@@ -37,9 +32,9 @@ namespace ToasterSimulator
             };
 
 
-            toaster.LoadItemsinCompartment(items1, 20);
-            toaster.LoadItemsinCompartment(items2, 60);
-            toaster.LoadItemsinCompartment(items3, 35);
+            toaster.LoadItemsinCompartment(items1, 70);
+            toaster.LoadItemsinCompartment(items2, 50);
+            toaster.LoadItemsinCompartment(items3, 25);
 
             Console.WriteLine("Items Loaded");
 

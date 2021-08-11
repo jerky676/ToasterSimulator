@@ -43,7 +43,7 @@ namespace ToasterSimulator
         }
 
         public void Load(ToasterItem toasterItem)
-        {
+        { 
             if (slots[0] == null)
             {
                 slots[0] = toasterItem;
@@ -62,7 +62,6 @@ namespace ToasterSimulator
         {
             get
             {
-
                 return (slots[0] != null) && (slots[1] != null);
             }
         }
@@ -98,8 +97,8 @@ namespace ToasterSimulator
 
         public void ShowToast()
         {
-            Console.WriteLine(Slot1 == empty ? "Slot 1 is empty" : $"{Slot1.Name} is {Slot1.CurrentToastLevel}");
-            Console.WriteLine(Slot2 == empty ? "Slot 2 is empty" : $"{Slot2.Name} is {Slot2.CurrentToastLevel}");
+            Console.WriteLine(Slot1 == empty ? "Slot 1 is empty" : $"Slot 1 {Slot1.Name} is {Slot1.CurrentToastLevel}");
+            Console.WriteLine(Slot2 == empty ? "Slot 2 is empty" : $"Slot 2 {Slot2.Name} is {Slot2.CurrentToastLevel}");
         }
 
         public void UpdateStatus(int secondsElapsed)

@@ -16,9 +16,9 @@ namespace ToasterSimulator.ToasterItems
         {
             decimal toastLevelNumber = timeElasped / ToastLevelIncrementInSeconds;
             var toastLevel = Math.Round(toastLevelNumber, 0);
-            if (toastLevel >= (int)ToastLevel.Burnt)
+            if (toastLevel >= (int)ToastLevel.OnFire)
             {
-                CurrentToastLevel = ToastLevel.Burnt;
+                CurrentToastLevel = ToastLevel.OnFire;
             }
 
             CurrentToastLevel = (ToastLevel)toastLevel;

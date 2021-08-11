@@ -24,20 +24,25 @@ namespace ToasterSimulator
         public void LoadItemsinCompartment(List<ToasterItem> toasterItems, int timerInSeconds)
         {
             var compartmentSettings = new CompartmentSettings(timerInSeconds);
-            foreach(var toasterItem in toasterItems)
+            int iteration = 0;
+            foreach (var toasterItem in toasterItems)
             {
-                if (!compartmentSettings.Full)
-                {
-                    compartmentSettings.Load(toasterItem);
-                }
-                else
+                iteration++;
+                if (compartmentSettings.Full)
                 {
                     ToasterCompartments.Add(compartmentSettings);
                     compartmentSettings = new CompartmentSettings(timerInSeconds);
                 }
+
+                compartmentSettings.Load(toasterItem);
+                
+                if (iteration == toasterItems.Count())
+                {
+                    ToasterCompartments.Add(compartmentSettings);
+                }
+
             }
         }
-
 
         public void ShowToast()
         {
