@@ -14,14 +14,16 @@ namespace ToasterSimulator.ToasterItems
 
         public void ChangeToasterState(int timeElasped)
         {
-            decimal toastLevelNumber = timeElasped / ToastLevelIncrementInSeconds;
-            var toastLevel = Math.Round(toastLevelNumber, 0);
-            if (toastLevel >= (int)ToastLevel.OnFire)
+            var toastLevel = (int)Math.Round((decimal)(timeElasped / ToastLevelIncrementInSeconds),0);
+            var onfireInt = (int)ToastLevel.OnFire;
+            if (toastLevel > onfireInt)
             {
                 CurrentToastLevel = ToastLevel.OnFire;
             }
-
-            CurrentToastLevel = (ToastLevel)toastLevel;
+            else
+            {
+                CurrentToastLevel = (ToastLevel)toastLevel;
+            }
         }
 
 
