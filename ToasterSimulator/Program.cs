@@ -1,31 +1,53 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using ToasterSimulator.ToasterItems;
 
 namespace ToasterSimulator
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var toaster = new Toaster(3);
+            var toaster = new Toaster();
+
+            //var toasterComa
+
+
 
             Console.WriteLine("Load Items");
-            toaster.ToasterCompartments[0] = new ToasterCompartment();
-            toaster.ToasterCompartments[1] = new ToasterCompartment();
 
-            toaster.ToasterCompartments[0].TimerSeconds = 20;
-            toaster.ToasterCompartments[1].TimerSeconds = 10;
+            var items1 = new List<ToasterItem> {
+                new Bread(),
+                new Waffle(),
+                new Bread(),
+                new Waffle(),
+                new Waffle()
+            };
 
-            toaster.ToasterCompartments[0].Slot1 = new Bread();
-            toaster.ToasterCompartments[0].Slot2 = new Waffle();
-            toaster.ToasterCompartments[1].Slot1 = new Bread();
-            toaster.ToasterCompartments[1].Slot2 = new Waffle();
+            var items2 = new List<ToasterItem> {
+                new Waffle(),
+                new Waffle(),
+                new Waffle()
+            };
+
+            var items3 = new List<ToasterItem> {
+                new Bread(),
+                new Bread(),
+            };
+
+
+            toaster.LoadItemsinCompartment(items1, 20);
+            toaster.LoadItemsinCompartment(items2, 60);
+            toaster.LoadItemsinCompartment(items3, 35);
+
             Console.WriteLine("Items Loaded");
 
             Console.WriteLine("Starting Toast");
-            toaster.ToasterCompartments[0].Start();
-            toaster.ToasterCompartments[1].Start();
 
+            await toaster.StartAll();
 
+            toaster.ShowToast();
 
         }
     }

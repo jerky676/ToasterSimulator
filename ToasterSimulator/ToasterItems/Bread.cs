@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToasterSimulator
+namespace ToasterSimulator.ToasterItems
 {
     public class Bread : ToasterItem
     {
         public Bread()
         {
-            Name = "Waffle";
+            Name = "Bread";
             ToastLevelIncrementInSeconds = 7;
         }
     }

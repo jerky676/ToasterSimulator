@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToasterSimulator
+namespace ToasterSimulator.ToasterItems
 {
     public class Waffle: ToasterItem
     {
